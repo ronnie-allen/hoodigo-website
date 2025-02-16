@@ -88,11 +88,6 @@ This project serves as a personal practice platform, but suggestions and contrib
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
 
 ### 💙 Thank You for Visiting Hoodigo!
 
