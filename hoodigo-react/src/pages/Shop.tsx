@@ -82,14 +82,7 @@ const Shop: React.FC = () => {
         style={{
           background: `linear-gradient(rgba(0, 8, 20, 0.6), rgba(0, 8, 20, 0.5)), url(/images/shop-banner-bg.jpg)`,
           backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          height: '40vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: '#fff',
-          textAlign: 'center'
+          backgroundRepeat: 'no-repeat'
         }}
       >
         <h2>#stayhoodified</h2>
@@ -106,7 +99,7 @@ const Shop: React.FC = () => {
           {/* Filters and Search */}
           <div className="row mb-4">
             <div className="col-md-12">
-              <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
+              <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                 {/* Search Bar */}
                 <div className="flex-grow-1" style={{ maxWidth: '300px' }}>
                   <input
@@ -119,7 +112,7 @@ const Shop: React.FC = () => {
                 </div>
 
                 {/* Category Filter */}
-                <div className="d-flex gap-2">
+                <div className="d-flex gap-2 flex-wrap">
                   <button
                     className={`btn ${selectedCategory === 'all' ? 'btn-primary' : 'btn-outline-primary'}`}
                     onClick={() => handleCategoryChange('all')}

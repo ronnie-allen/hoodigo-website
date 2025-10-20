@@ -18,55 +18,50 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
   };
 
   return (
-    <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
-      <div className="card text-center align-items-center" style={{ width: '16rem' }}>
+    <div className="card text-center h-100">
+      <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
         <img
           src={product.image}
-          className="card-img-top w-75"
+          className="card-img-top w-100"
           alt={product.name}
           style={{ height: '206px', objectFit: 'cover' }}
         />
-        <div className="card-body">
-          <h6 className="card-text text-black" style={{ fontSize: '16px', fontWeight: '500' }}>
+        <div className="card-body d-flex flex-column">
+          <h6 className="card-title" style={{ fontSize: '16px', fontWeight: '500', color: '#000', marginBottom: '8px' }}>
             {product.name}
           </h6>
-          <h6 className="card-text text-black" style={{ fontSize: '18px', fontWeight: '700' }}>
+          <h6 style={{ fontSize: '18px', fontWeight: '700', color: '#000', marginBottom: '15px' }}>
             ₹ {product.price.toLocaleString()}
           </h6>
 
+          {/* Spacer to push button to bottom */}
+          <div className="mt-auto"></div>
+
           {/* Add to Cart Button */}
           <button
-            className="btn"
+            className="btn btn-primary align-self-center"
             onClick={(e) => {
               e.preventDefault();
               handleAddToCart(e);
             }}
             style={{
-              position: 'absolute',
-              bottom: '15px',
-              right: '15px',
               width: '40px',
               height: '40px',
               borderRadius: '50%',
-              backgroundColor: '#15616d',
-              color: 'white',
-              border: 'none',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = '#0f4a5a';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = '#15616d';
+              justifyContent: 'center',
+              padding: '0',
+              position: 'absolute',
+              bottom: '15px',
+              right: '15px'
             }}
           >
             <i className="fa-solid fa-cart-plus"></i>
           </button>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

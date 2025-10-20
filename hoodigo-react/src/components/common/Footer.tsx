@@ -9,18 +9,18 @@ const Footer: React.FC<FooterProps> = ({ showNewsletter = true }) => {
       {showNewsletter && (
         <section className="newsletter">
           <div className="container">
-            <div className="row">
-              <div className="col-md-6 text-start">
+            <div className="row align-items-center">
+              <div className="col-md-6">
                 <h4>Signup for Newsletters</h4>
                 <p>Get E-mail notifications about our <span>latest Offers</span> & Shops</p>
               </div>
-              <div className="col-md-6 text-end">
-                <div className="d-flex justify-content-end align-items-center">
+              <div className="col-md-6">
+                <div className="d-flex align-items-center">
                   <input
                     type="email"
                     placeholder="Enter your E-mail"
                     id="mail-box"
-                    className="form-control me-2"
+                    className="form-control me-3"
                     style={{ maxWidth: '250px' }}
                   />
                   <button className="btn btn-light">Signup</button>
@@ -46,20 +46,20 @@ const Footer: React.FC<FooterProps> = ({ showNewsletter = true }) => {
               {/* Social Media Links */}
               <div className="follow">
                 <h4 className="mb-3">Follow us</h4>
-                <div className="icon">
-                  <a href="#" className="me-3" aria-label="Facebook">
+                <div className="icon d-flex gap-3">
+                  <a href="https://facebook.com/hoodigo" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#" className="me-3" aria-label="Twitter">
+                  <a href="https://twitter.com/hoodigo" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#" className="me-3" aria-label="Instagram">
+                  <a href="https://instagram.com/hoodigo" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="#" className="me-3" aria-label="Pinterest">
+                  <a href="https://pinterest.com/hoodigo" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Pinterest">
                     <i className="fab fa-pinterest-p"></i>
                   </a>
-                  <a href="#" aria-label="YouTube">
+                  <a href="https://youtube.com/hoodigo" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel">
                     <i className="fab fa-youtube"></i>
                   </a>
                 </div>

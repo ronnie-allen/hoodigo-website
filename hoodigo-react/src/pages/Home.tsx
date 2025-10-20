@@ -91,7 +91,14 @@ const Home: React.FC = () => {
       </section>
 
       {/* Advertisement Banner */}
-      <section className="ad-banner">
+      <section
+        className="ad-banner"
+        style={{
+          background: `linear-gradient(rgba(0, 8, 20, 0.6), rgba(0, 8, 20, 0.5)), url(/images/ad-banner.jpg)`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <h4>Repair Services</h4>
         <h2>up to <span>70% off</span> on All Men Accessories</h2>
         <button>Explore More</button>
@@ -117,13 +124,29 @@ const Home: React.FC = () => {
       <section className="posters">
         <div className="container">
           <div className="row">
-            <div className="banner-box col-md-6" id="poster1">
+            <div
+              className="banner-box col-md-6"
+              id="poster1"
+              style={{
+                background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/poster-section-1.jpg)`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
               <h4>Crazy deals</h4>
               <h2>Buy 1 get 1 free</h2>
               <span>The best classic hoodies is on sale at Hoodigo</span>
               <button>Learn More</button>
             </div>
-            <div className="banner-box col-md-5" id="poster2">
+            <div
+              className="banner-box col-md-5"
+              id="poster2"
+              style={{
+                background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/poster-section-3.jpg)`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
               <h4>Cool Offers</h4>
               <h2>New <br /> Hoodies</h2>
               <span>Flat 50% - 70% on every deal</span>

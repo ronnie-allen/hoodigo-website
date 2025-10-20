@@ -122,6 +122,7 @@ const Navbar: React.FC<NavbarProps> = ({ isAuthenticated = false, cartItemCount 
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  aria-label="Account menu"
                 >
                   <i className="fa-solid fa-user me-2"></i>
                   Account
